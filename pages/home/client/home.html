@@ -1,4 +1,9 @@
 <template name="home">
   <h1>Hello</h1>
-  Welcome.
+  Welcome.<br>
+  {{#if currentUser}}
+    Congratulations for getting login in!
+  {{else}}
+    You better login in!
+  {{/if}}
 </template>
