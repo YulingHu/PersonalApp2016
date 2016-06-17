@@ -1,5 +1,5 @@
 Template.offerpets.helpers({
-  pets:function(){
+  offerpets:function(){
     return Offerpets.find();
   }
 })
