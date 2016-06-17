@@ -1,6 +1,6 @@
-<template name="comments">
+<template name="contactus">
   {{#if currentUser}}
-  <h1>Comments</h1>
+  <h1>Contact Us</h1>
   <input type="text" class="js-user-comment">
   <select class="js-rating-comment">
     <option>1</option>
@@ -23,7 +23,6 @@
     {{> commentRow  comment=c}}
   {{/each}}
   </ul>
-
 </template>
 
 <template name="commentRow">

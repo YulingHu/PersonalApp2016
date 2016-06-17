@@ -1,9 +1,9 @@
-Template.comments.helpers({
+Template.contactus.helpers({
   commentsdata: function()
     {return Comments.find({},{sort:{createdAt:-1},limit:3});}
 })
 
-Template.comments.events({
+Template.contactus.events({
   "click .js-submit-comment": function(event){
     event.preventDefault();
     console.dir(event);
