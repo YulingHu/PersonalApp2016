@@ -24,4 +24,7 @@ twbs:bootstrap
 ian:accounts-ui-bootstrap-3
 accounts-password
 accounts-google
+<<<<<<< HEAD
 reactive-dict
+=======
+>>>>>>> 57c3573cb33fcdca586b60a232cc35770dd17d39
