@@ -1,0 +1,84 @@
+<template name="availablepets">
+  <br><br>
+  <div class="jumbotron" style="background-image: url(images/17.png); background-size: 100% 107%;">
+		<br><h1 class="text-right">Available Pets</h1>
+		<br><br><br>
+  </div>
+
+  <form class="form-horizontal">
+
+  <div class="form-group">
+    <label for="pet" class="col-sm-1 control-label">Pet:</label>
+    <div class="col-sm-4">
+      <select class="form-control">
+      <option>Dog</option>
+      <option>Puppy</option>
+      <option>Cat</option>
+      <option>Kitten</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="breed" class="col-sm-1 control-label">Breed:</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" id="breed" placeholder="Breed">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="sex" class="col-sm-1 control-label">Sex:</label>
+    <div class="col-sm-4">
+      <select class="form-control">
+      <option>Boy</option>
+      <option>Girl</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="age" class="col-sm-1 control-label">Age:</label>
+    <div class="col-sm-4">
+      <label class="checkbox-inline">
+         <input type="checkbox" id="checkbox1" value="option1"> 0-1 months
+      </label>
+      <label class="checkbox-inline">
+         <input type="checkbox" id="checkbox2" value="option2"> 1-2 months
+      </label>
+      <label class="checkbox-inline">
+         <input type="checkbox" id="checkbox3" value="option3"> 2-3 months
+      </label>
+      <label class="checkbox-inline">
+         <input type="checkbox" id="checkbox4" value="option4"> 3-6 months
+      </label>
+      <label class="checkbox-inline">
+         <input type="checkbox" id="checkbox5" value="option5"> 6-9 months
+      </label>
+      <label class="checkbox-inline">
+         <input type="checkbox" id="checkbox6" value="option6"> 9-12 months
+      </label>
+      <label class="checkbox-inline">
+         <input type="checkbox" id="checkbox7" value="option7"> 1-2 years
+      </label>
+      <label class="checkbox-inline">
+         <input type="checkbox" id="checkbox8" value="option8"> 2-3 years
+      </label>
+      <label class="checkbox-inline">
+         <input type="checkbox" id="checkbox9" value="option9"> 3-4 years
+      </label>
+      <label class="checkbox-inline">
+         <input type="checkbox" id="checkbox10" value="option10"> 4-5 years
+      </label>
+      <label class="checkbox-inline">
+         <input type="checkbox" id="checkbox11" value="option11"> 5+ years
+      </label>
+    </div>
+  </div><br>
+
+  <div class="col-sm-5">
+    <button type="button" class="btn btn-primary btn-lg btn-block">Search Available Pets</button>
+  </div>
+
+  </form>
+
+</template>
