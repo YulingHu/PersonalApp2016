@@ -2,7 +2,7 @@
 
   <br><br>
   <div class="jumbotron" style="background-image: url(images/9.jpg); background-size: 100% 130%;">
-		<br><h1>Offer Your Pets</h1>
+		<h1>Offer Your Pets</h1>
 		<br><br><br>
   </div>
 
@@ -87,32 +87,5 @@
   </div>
 
 </form>
-
-
-<br><br><br><br><br><br
-
-  <h1>Offer Pets</h1>
-  Your name:<input type="text" class="js-name"><br><br>
-
-  Pet:
-	<input type="checkbox" class="js-dog">Dog
-	<input type="checkbox" class="js-puppy">Puppy<br>
-	<input type="checkbox" class="js-cat">Cat
-	<input type="checkbox" class="js-kitten">Kitten<br><br>
-  Sex:
-	<input type="checkbox" class="js-boy">Boy
-	<input type="checkbox" class="js-girl">Girl<br><br>
-
-  Breed:<input type="text" class="js-breed"><br><br>
-  Age:<input type="text" class="js-age">
-  <br><br><br>
-  <button class="btn btn-info btn-lg js-addPet">Offer this pet</button>
-  <hr>
-
-  <ul>
-    {{#each r in offerpets}}
-    <li>{{r.offeredBy}} is offering a {{r.petname}}: {{r.breed}}, {{r.sex}}, {{r.age}}</li>
-    {{/each}}
-  </ul>
-
+<br><br><br><br><br><br>
 </template>

@@ -1,9 +1,6 @@
 <template name="layout">
-
 <div class="container">
   <br><br>
-
-  <div class="container">
 
     <ul class="nav nav-pills nav-justified">
       <li role="presentation" class="active"><a href="{{pathFor 'home'}}">Home</a></li>
@@ -12,18 +9,10 @@
       <li role="presentation"><a href="{{pathFor 'availablepets'}}">Available Pets</a></li>
       <li role="presentation"><a href="{{pathFor 'offerpets'}}">Offer Pets</a></li>
       <li role="presentation"><a href="{{pathFor 'contactus'}}">Contact Us</a></li>
-
       <li role="presentation"><a href="{{pathFor 'practice'}}">Practice</a></li>
       <li>{{> loginButtons}}</li>
     </ul>
 
     {{> yield}}
 </div>
-
-      <li>{{> loginButtons}}</li>
-    </ul>
-
-    <!-- <h1>Pets</h1> -->
-    {{> yield}}
-  </div>
 </template>

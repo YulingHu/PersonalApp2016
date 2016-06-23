@@ -1,6 +1,7 @@
 <template name="contactus">
-  {{#if currentUser}}
   <h1>Contact Us</h1>
+  {{#if currentUser}}
+  <h3>Congratulations for getting login!</h3><br>
   <input type="text" class="js-user-comment">
   <select class="js-rating-comment">
     <option>1</option>
@@ -24,12 +25,6 @@
   {{/each}}
   </ul>
 
-  <!-- {{#if currentUser}}
-    Congratulations for getting login!
-  {{else}}
-    Login to see more available pets.
-  {{/if}} -->
-  
 </template>
 
 <template name="commentRow">
