@@ -1,6 +1,6 @@
 Template.contactus.helpers({
   commentsdata: function()
-    {return Comments.find({},{sort:{createdAt:-1},limit:3});}
+    {return Comments.find({},{sort:{createdAt:-1},limit:10});}
 })
 
 Template.contactus.events({
@@ -19,18 +19,14 @@ Template.contactus.events({
     {text: comment_text,rating: comment_rating,
       createdAt: new Date(),createdBy: Meteor.userId(),
       userEmail: Meteor.user().emails[0].address};
-    //console.dir(comment_obj);
-    Comments.insert(comment_obj);
-    $(".js-user-comment").val("");
-    //Router.go('/');
-    //console.log("Did we get here??");
+    Meteor.call("commentsinsert",comment_obj);
+     $(".js-user-comment").val("");
+
   }
 })
 
 Template.commentRow.events({
   "click .js-delete-comment": function(event){
-    console.log("click on the x");
-    console.dir(this);
-    Comments.remove(this.comment._id);
+    Meteor.call("commentsremove",this.comment._id);
   }
 })
