@@ -1,0 +1,22 @@
+<template name="settings">
+	<h1>Settings</h1>
+  <br>
+
+	{{#if currentUser}}
+		<form>
+      <div class="form-group">
+        <label for="greeting" class="col-sm-2 control-label">Your greeting: </label>
+        <div class="col-sm-4">
+          <input type="greeting" class="form-control js-greeting">
+        </div>
+      </div>
+	  	<button class="js-submit btn btn-info">Submit</button>
+		</form>
+    <br>
+		<p>Your own greeting:  {{settings.yourgreeting}}</p>
+
+	{{else}}
+		<h4>You must login to change settings.</h4>
+	{{/if}}
+
+</template>
