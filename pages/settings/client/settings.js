@@ -1,5 +1,9 @@
+// Template.offerpets.helpers({
+//   settings:function(){return Settings.findOne({user:Meteor.userId()});}
+// })
+
 Template.settings.helpers({
-	settings:function(){return Settings.findOne({user:Meteor.userId()});}
+  settings:function(){return Settings.find({});}
 })
 
 Template.settings.events({

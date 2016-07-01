@@ -9,3 +9,8 @@ Meteor.publish("theMyprofile", function(){
   if(this.userId){return Myprofile.find();}
   else{this.ready();}
 });
+
+Meteor.publish("thePets", function(){
+  if(this.userId){return Pets.find();}
+  else{this.ready();}
+});
