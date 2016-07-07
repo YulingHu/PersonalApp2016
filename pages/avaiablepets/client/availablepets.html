@@ -1,10 +1,11 @@
-<template name="availablepets">
 
-  <br><br>
+<template name="availablepets">
+  <br>
   <div class="jumbotron" style="background-image: url(images/17.png); background-size: 100% 107%;">
 		<br><h1 class="text-right">Available Pets</h1>
 		<br><br><br>
   </div>
+
 
   <form class="form-inline">
   <div class="form-group col-md-offset-4 col-sm-2">
@@ -31,19 +32,43 @@
   </div>
   <button type="submit" class="btn btn-primary js-search">Search</button>
   </form>
-  <hr><br>
+  <br>
+
 
   {{#if currentUser}}
+  <h3>Search Results:</h3><br>
   {{#each p in pets}}
+  <div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>{{p.objpet}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="col-sm-3">
+      <h4><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Breed :  {{p.objbreed}}</h4>
+      <h4><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Sex :  {{p.objsex}}</h4>
+      <h4><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Age :  {{p.objage}}</h4>
+    </div>
+    <div class="col-md-offset-4 col-sm-4 bg-danger"><br>
+      <h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Owner :  {{p.objname}}</h4>
+      <h4><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Email :  {{p.objemail}}</h4>
+      <br>
+    </div>
+  </div>
+  </div><br><br>
+  {{/each}}
+
+  <hr>
+  <h3>All pets avaliable:</h3><br>
+  {{#each p in allpets}}
   <div class="panel panel-info">
   <div class="panel-heading">
     <h3><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>{{p.objpet}}</h3>
   </div>
   <div class="panel-body">
     <div class="col-sm-3">
+      <h4><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Breed :  {{p.objbreed}}</h4>
       <h4><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Sex :  {{p.objsex}}</h4>
       <h4><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Age :  {{p.objage}}</h4>
-      <h4><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Breed :  {{p.objbreed}}</h4>
     </div>
     <div class="col-md-offset-4 col-sm-4 bg-info"><br>
       <h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Owner :  {{p.objname}}</h4>
@@ -55,7 +80,7 @@
   {{/each}}
 
   {{else}}
-    <h4> You must login to see available pets.</h4>
+    <h4> You must login to see more available pets.</h4>
   {{/if}}
 
 <br><br><br><br><br><br><br><br><br>

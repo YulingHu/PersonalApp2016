@@ -1,15 +1,20 @@
 Template.dogs.helpers({
-	// dogs:function(){return Dogs.find({});},
+	dogs:function(){return Dogs.find({});},
+
 	// dogsearch: function(){
 	// 	return DogSearch.find({}, {sort:{dog_popularity:-1}});
 	// },
-
 
 })
 
 
 
 Template.dogs.events({
+
+	"click .js-search":function(event){
+    event.preventDefault();
+    Router.go('availablepets');
+  },
 
 	// "click .js-search": function(event){
 	// 	event.preventDefault();

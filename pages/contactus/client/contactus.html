@@ -1,36 +1,65 @@
 <template name="contactus">
-  <h1>Contact Us</h1>
+  <br>
+  <div class="jumbotron" style="background-image: url(images/8.jpg); background-size: 100% 140%;">
+		<br><h1>Contact Us</h1>
+    <br><br><br><br>
+  </div>
+  <h2>Feel free to give your suggestions here!</h2><br><br>
+
   {{#if currentUser}}
-  <h3>Congratulations for getting login!</h3><br>
-  <input type="text" class="js-user-comment">
-  <select class="js-rating-comment">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-  </select>
-  <br><br>
-  <button class="js-submit-comment btn btn-lg btn-info">
-    Submit Comment
-  </button>
+
+  <form  class="form-horizontal">
+    <div class="form-group">
+      <label for="name" class="col-sm-1 control-label">Nickname:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control js-name" placeholder="Jane Doe">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Suggestion" class="col-sm-1 control-label">Suggestions:</label>
+      <div class="col-sm-4">
+        <input type="text" class="form-control js-suggestions" placeholder="Suggestions">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Suggestion" class="col-sm-1 control-label">Rate Us:</label>
+      <div class="col-sm-4">
+      <select class="form-control js-rating">
+        <option>Great</option>
+        <option>Good</option>
+        <option>OK</option>
+        <option>Bad</option>
+      </select><br><br>
+    </div>
+    </div>
+
+      <button class="btn btn-lg btn-info js-submit">Submit Suggestions</button>
+  </form>
+
   {{else}}
-  <h2>You must log in to make comments!</h2>
+    <h2>You must log in to make comments!</h2>
   {{/if}}
 
-  <hr>
-  <ul>
+  <br><hr><br>
   {{#each c in commentsdata}}
     {{> commentRow  comment=c}}
   {{/each}}
-  </ul>
-
+  
 </template>
 
+
+
 <template name="commentRow">
-  <li>
-    {{comment.rating}}//{{comment.createdAt}} : {{comment.text}} : {{comment.userEmail}}
-    <span class="js-delete-comment glyphicon glyphicon-remove" aria-hidden="true">
-    </span>
-  </li>
+  <div class="panel panel-info">
+    <div class="panel-heading"><h4><span class="glyphicon glyphicon-user" aria-hidden="true"></span>{{comment.name}}</h4></div>
+    <div class="panel-body">
+
+      <h4><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>: {{comment.rating}}</h4>
+      <h4>{{comment.text}}</h4>
+      <h4>Submitted by {{comment.userEmail}} at {{comment.createdAt}}</h4>
+      <h4><span class="glyphicon glyphicon-trash js-delete" aria-hidden="true">Delete it</span></h4>
+    </div>
+  </div><br><br>
 </template>

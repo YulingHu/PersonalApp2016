@@ -1,4 +1,22 @@
 <template name="cats">
+  <br>
+  <div class="jumbotron" style="background-image: url(images/10.png); background-size: 100% 120%;">
+		<br><h1 class="text-right">Cat Breed</h1>
+		<br><br><br>
+  </div>
+
+  {{#each c in cats}}
+  <div class="panel panel-info">
+  <div class="panel-heading"><h3><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>{{c.name}}</h3></div>
+  <div class="panel-body">
+    <div class="col-sm-4"><img src={{c.img}} height="200"></div>
+    <div class="col-md-offset-1 col-sm-5"><br>
+      <h4>{{c.infomation}}</h4><br>
+      <button class="btn btn-primary js-search">Search more pets</button>
+  </div></div></div><br><br>
+  {{/each}}
+
+
   <!-- <div class="row">
 		<div class="col-md-3  col-md-offset-8 col-xs-4">
 			<div class="input-group">
@@ -8,108 +26,6 @@
 	    	</span>
 			</div>
 		</div>
-	</div>
-
-  <ul>
-  {{#each c in catsearch}}
-  <li><a href="/catbreed/{{c._id}}">
-    {{c.cat_breed}}</a>: {{c.cat_popularity}}</li>
-  {{/each}}
-  </ul> -->
-
-
-        <br><br><h2> Top 10 most popular cat breed : </h2><hr><br>
-
-        <div class="panel panel-info">
-        <div class="panel-heading"><h3>1: Persian</h3></div>
-        <div class="panel-body">
-          <div class="col-sm-4"><img src="images/c1.jpg" height="200"></div>
-          <div class="col-md-offset-1 col-sm-4">
-            <h4>This breed has been number one since the CFA first started keeping records in 1871. Persians are affectionate and loyal but need their long fur groomed every day.</h4><br>
-            <button class="btn btn-primary">Search this pet</button>
-        </div></div></div><br><br>
-
-        <div class="panel panel-info">
-        <div class="panel-heading"><h3>2: PMaine Coon</h3></div>
-        <div class="panel-body">
-          <div class="col-sm-4"><img src="images/c2.jpg" height="200"></div>
-          <div class="col-md-offset-1 col-sm-4">
-            <h4>This breed has been in second place since 1992 and it's no wonder. This is a very gentle, loving creature who is large by cat-size. They weigh between 15 and 25 lbs. and have long fur like the Persian. However, they do not need as much grooming as the Persian.</h4><br>
-            <button class="btn btn-primary">Search this pet</button>
-        </div></div></div><br><br>
-
-        <div class="panel panel-info">
-        <div class="panel-heading"><h3>3: Exotic</h3></div>
-        <div class="panel-body">
-          <div class="col-sm-4"><img src="images/c3.jpg" height="200"></div>
-          <div class="col-md-offset-1 col-sm-4">
-            <h4>This breed is like a Persian but with short fur. Their nickname is "Persian in Pajamas" because of their coloring. They are sweet like a Persian but only need brushing twice a week.</h4><br>
-            <button class="btn btn-primary">Search this pet</button>
-        </div></div></div><br><br>
-
-        <div class="panel panel-info">
-        <div class="panel-heading"><h3>4: Siamese</h3></div>
-        <div class="panel-body">
-          <div class="col-sm-4"><img src="images/c4.jpg" height="200"></div>
-          <div class="col-md-offset-1 col-sm-4">
-            <h4>The yowl of a Siamese is very familiar to fanciers of this breed. And it's not just for attention - Siamese like to "chat" with their owners. This is a sleek cat who is very athletic. They usually gravitate to one person and are loyal and loving.</h4><br>
-            <button class="btn btn-primary">Search this pet</button>
-        </div></div></div><br><br>
-
-        <div class="panel panel-info">
-        <div class="panel-heading"><h3>5: Abyssinian</h3></div>
-        <div class="panel-body">
-          <div class="col-sm-4"><img src="images/c5.jpg" height="200"></div>
-          <div class="col-md-offset-1 col-sm-4">
-            <h4>These cats are considered some of the lookers in the cat world. Thin and elegant with a shiny coat, they are active felines, very playful and friendly.</h4><br>
-            <button class="btn btn-primary">Search this pet</button>
-        </div></div></div><br><br>
-
-        <div class="panel panel-info">
-        <div class="panel-heading"><h3>6: Ragdoll</h3></div>
-        <div class="panel-body">
-          <div class="col-sm-4"><img src="images/c6.jpg" height="200"></div>
-          <div class="col-md-offset-1 col-sm-4">
-            <h4>This breed gets its name from the way these cats go completely limp in your arms when you pick them up. They are cute and cuddly and large like the Maine Coon, weighing between 10 and 20 lbs. (males tend to be larger). This is a breed that should always be kept inside as they are very docile and would likely not defend themselves outside.</h4><br>
-            <button class="btn btn-primary">Search this pet</button>
-        </div></div></div><br><br>
-
-        <div class="panel panel-info">
-        <div class="panel-heading"><h3>7: Birman</h3></div>
-        <div class="panel-body">
-          <div class="col-sm-4"><img src="images/c7.jpg" height="200"></div>
-          <div class="col-md-offset-1 col-sm-4">
-            <h4> If you want a cat that is dog-like, the Birman is a good choice. He is friendly, outgoing, even-tempered and flexible, a very rare trait to find in a cat. They are known to come when called and to greet you at the door like a pooch would. They have long silky hair that does not require much grooming.</h4><br>
-            <button class="btn btn-primary">Search this pet</button>
-        </div></div></div><br><br>
-
-        <div class="panel panel-info">
-        <div class="panel-heading"><h3>8: American Shorthair</h3></div>
-        <div class="panel-body">
-          <div class="col-sm-4"><img src="images/c8.jpg" height="200"></div>
-          <div class="col-md-offset-1 col-sm-4">
-            <h4>This breed originally arrived in America on the Mayflower. They were bred for hunting and thus are excellent hunters, have good health and are a quiet cats. They make great family pets and are especially good with children.</h4><br>
-            <button class="btn btn-primary">Search this pet</button>
-        </div></div></div><br><br>
-
-        <div class="panel panel-info">
-        <div class="panel-heading"><h3>9: Oriental</h3></div>
-        <div class="panel-body">
-          <div class="col-sm-4"><img src="images/c9.jpg" height="200"></div>
-          <div class="col-md-offset-1 col-sm-4">
-            <h4>This breed looks and behaves like a Siamese but comes in two fur lengths and over 300 color combinations. Their personality is similar to the Siamese but they are quieter.</h4><br>
-            <button class="btn btn-primary">Search this pet</button>
-        </div></div></div><br><br>
-
-        <div class="panel panel-info">
-        <div class="panel-heading"><h3>10: Sphynx</h3></div>
-        <div class="panel-body">
-          <div class="col-sm-4"><img src="images/c10.jpg" height="200"></div>
-          <div class="col-md-offset-1 col-sm-4">
-            <h4>Known as the "Naked Climber" this breed climbs anything and is lively and athletic. They have an unusual appearance, sans fur, and come in a multitude of different skin colors. They are loyal and loving and demand constant attention.</h4><br>
-            <button class="btn btn-primary">Search this pet</button>
-        </div></div></div><br><br>
-
-
+	</div> -->
 
 </template>

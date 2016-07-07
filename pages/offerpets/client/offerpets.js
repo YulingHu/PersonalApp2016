@@ -1,6 +1,7 @@
 Template.offerpets.helpers({
-  pets:function(){return Pets.findOne({user:Meteor.userId()});}
+  pets:function(){return Pets.find();}
 })
+
 
 Template.offerpets.events({
   "click .js-submit":function(event){

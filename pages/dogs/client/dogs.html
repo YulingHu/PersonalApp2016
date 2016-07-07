@@ -1,136 +1,38 @@
 <template name="dogs">
+  <br>
+  <div class="jumbotron" style="background-image: url(images/9.jpg); background-size: 100% 130%;">
+		<h1>Dog Breed</h1>
+		<br><br><br>
+  </div>
 
-  <!-- <br>
-  <div class="row">
-		<div class="col-md-3  col-md-offset-8 col-xs-4">
-			<div class="input-group">
-		  	<input type="text" class="form-control js-breed" placeholder="Dog Breed...">
-		  	<span class="input-group-btn">
-		  	<button class="btn btn-primary js-search" type="button">Search</button>
-	    	</span>
-			</div>
-		</div>
-	</div>
-  <br><br> -->
-
-      <!-- {{#each d in dogsearch}}
-      <li><a href="/dogbreed/{{d._id}}">
-        {{d.dog_breed}}</a>: {{d.dog_popularity}}</li>
-      {{/each}} -->
-
-
-      <br><br><h2> Top 10 most popular dog breed : </h2><hr><br>
-
-      <div class="panel panel-info">
-      <div class="panel-heading"><h3>1: Labrador Retriever</h3></div>
-      <div class="panel-body">
-        <div class="col-sm-5"><img src="images/d1.jpg" height="200"></div>
-        <div class="col-md-offset-1 col-sm-3">
-          <h4>Breed: Sporting</h4>
-          <h4>Weight:	34 kgs</h4>
-          <h4>Height:	90 cms</h4><br>
-          <button class="btn btn-primary">Search this pet</button>
-      </div></div></div><br><br>
-
-      <div class="panel panel-info">
-      <div class="panel-heading"><h3>2: German Shepherd</h3></div>
-      <div class="panel-body">
-        <div class="col-sm-5"><img src="images/d2.jpg" height="200"></div>
-        <div class="col-md-offset-1 col-sm-3">
-          <h4>Breed: Herding</h4>
-          <h4>Weight:	37 kgs</h4>
-          <h4>Height:	65 cms</h4><br>
-          <button class="btn btn-primary">Search this pet</button>
-      </div></div></div><br><br>
-
-      <div class="panel panel-info">
-      <div class="panel-heading"><h3>3: Golden Retriever</h3></div>
-      <div class="panel-body">
-        <div class="col-sm-5"><img src="images/d3.jpg" height="200"></div>
-        <div class="col-md-offset-1 col-sm-3">
-          <h4>Breed: Sporting</h4>
-          <h4>Weight:	36 kgs</h4>
-          <h4>Height:	61 cms</h4><br>
-          <button class="btn btn-primary">Search this pet</button>
-      </div></div></div><br><br>
-
-      <div class="panel panel-info">
-      <div class="panel-heading"><h3>4: French Bull Dog</h3></div>
-      <div class="panel-body">
-        <div class="col-sm-5"><img src="images/d4.jpg" height="200"></div>
-        <div class="col-md-offset-1 col-sm-3">
-          <h4>Breed: Toy</h4>
-          <h4>Weight:	6-8 kgs</h4>
-          <h4>Height:	30-32 cms</h4><br>
-          <button class="btn btn-primary">Search this pet</button>
-      </div></div></div><br><br>
-
-
-      <div class="panel panel-info">
-      <div class="panel-heading"><h3>5: Beagle</h3></div>
-      <div class="panel-body">
-        <div class="col-sm-5"><img src="images/d5.jpg" height="200"></div>
-        <div class="col-md-offset-1 col-sm-3">
-          <h4>Breed: Hound</h4>
-          <h4>Weight:	6-8 kgs</h4>
-          <h4>Height:	30-32 cms</h4><br>
-          <button class="btn btn-primary">Search this pet</button>
-      </div></div></div><br><br>
-
-      <div class="panel panel-info">
-      <div class="panel-heading"><h3>6: British Bull Dog</h3></div>
-      <div class="panel-body">
-        <div class="col-sm-5"><img src="images/d6.jpg" height="200"></div>
-        <div class="col-md-offset-1 col-sm-3">
-          <h4>Breed: Toy</h4>
-          <h4>Weight:	6-8 kgs</h4>
-          <h4>Height:	30-32 cms</h4><br>
-          <button class="btn btn-primary">Search this pet</button>
-      </div></div></div><br><br>
-
-      <div class="panel panel-info">
-      <div class="panel-heading"><h3>7: Yorkshire Terrier</h3></div>
-      <div class="panel-body">
-        <div class="col-sm-5"><img src="images/d7.jpg" height="200"></div>
-        <div class="col-md-offset-1 col-sm-3">
-          <h4>Breed: Toy</h4>
-          <h4>Weight:	6-8 kgs</h4>
-          <h4>Height:	30-32 cms</h4><br>
-          <button class="btn btn-primary">Search this pet</button>
-      </div></div></div><br><br>
-
-      <div class="panel panel-info">
-      <div class="panel-heading"><h3>8: Poodle</h3></div>
-      <div class="panel-body">
-        <div class="col-sm-5"><img src="images/d8.jpg" height="200"></div>
-        <div class="col-md-offset-1 col-sm-3">
-          <h4>Breed: Toy</h4>
-          <h4>Weight:	6-8 kgs</h4>
-          <h4>Height:	30-32 cms</h4><br>
-          <button class="btn btn-primary">Search this pet</button>
-      </div></div></div><br><br>
-
-      <div class="panel panel-info">
-      <div class="panel-heading"><h3>9: Rottweiler</h3></div>
-      <div class="panel-body">
-        <div class="col-sm-5"><img src="images/d9.jpg" height="200"></div>
-        <div class="col-md-offset-1 col-sm-3">
-          <h4>Breed: Working</h4>
-          <h4>Weight:	59 kgs</h4>
-          <h4>Height:	69 cms</h4><br>
-          <button class="btn btn-primary">Search this pet</button>
-      </div></div></div><br><br>
-
-      <div class="panel panel-info">
-      <div class="panel-heading"><h3>10: Boxer</h3></div>
-      <div class="panel-body">
-        <div class="col-sm-5"><img src="images/d10.jpg" height="200"></div>
-        <div class="col-md-offset-1 col-sm-3">
-          <h4>Breed: Working</h4>
-          <h4>Weight:	32 kgs</h4>
-          <h4>Height:	63 cms</h4><br>
-          <button class="btn btn-primary">Search this pet</button>
-      </div></div></div><br><br>
-
+  {{#each d in dogs}}
+  <div class="panel panel-info">
+  <div class="panel-heading"><h3><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>{{d.name}}</h3></div>
+  <div class="panel-body">
+    <div class="col-sm-5"><img src={{d.img}} height="200"></div>
+    <div class="col-md-offset-1 col-sm-3"><br>
+      <h4>Breed: {{d.breed}}</h4>
+      <h4>Weight:	{{d.weight}} kgs</h4>
+      <h4>Height:	{{d.height}} cms</h4><br>
+      <button class="btn btn-primary js-search">Search more pets</button>
+  </div></div></div><br><br>
+  {{/each}}
 
 </template>
+
+<!--<div class="row">
+  <div class="col-md-3  col-md-offset-8 col-xs-4">
+    <div class="input-group">
+      <input type="text" class="form-control js-breed" placeholder="Dog Breed...">
+      <span class="input-group-btn">
+      <button class="btn btn-primary js-search" type="button">Search</button>
+      </span>
+    </div>
+  </div>
+</div>
+<br><br> -->
+
+    <!-- {{#each d in dogsearch}}
+    <li><a href="/dogbreed/{{d._id}}">
+      {{d.dog_breed}}</a>: {{d.dog_popularity}}</li>
+    {{/each}} -->
