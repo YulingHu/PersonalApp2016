@@ -18,3 +18,7 @@ Meteor.publish("theDogs", function(){
 Meteor.publish("theCats", function(){
   return Cats.find();
 });
+
+Meteor.publish("theBios", function(){
+  return Bios.find();
+});
